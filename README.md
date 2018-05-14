@@ -76,3 +76,8 @@ Blog Post: https://reactjs.org/blog/2017/04/07/react-v15.5.0.html
 
 Blog Post: https://reactjs.org/blog/2017/06/13/react-v15.6.0.html
 
+## React 15.6.2
+
+* Fixes regressions for `onChange` event handling updates from last release.
+
+Blog Post: https://reactjs.org/blog/2017/09/25/react-v15.6.2.html
