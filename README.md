@@ -4,8 +4,6 @@ Notes on features in React 16 and upgrading from v15
 
 ## React 15.0.0
 
-**DOM Interactions improvements**
-
 * Gets rid of the`data-reactid` attribute on every node and makes the DOM lighter.
     * Note: data-reactid is still present for server-rendered content, however it is much smaller than before and is simply an auto-incrementing counter.
 
@@ -51,3 +49,19 @@ Blog Post: https://reactjs.org/blog/2016/07/11/introducing-reacts-error-code-sys
 
 Blog Post: https://reactjs.org/blog/2016/11/16/react-v15.4.0.html
 
+## React 15.5.0
+
+* React.PropTypes and React.createClass are now in their own packages
+    * The propTypes, contextTypes, and childContextTypes APIs will work exactly as before. The only change is that the built-in validators now live in a separate package.
+    * You may also consider using Flow to statically type check your JavaScript code, including React components. 
+
+* Discontinuing support for React Addons - listed [here](https://reactjs.org/blog/2017/04/07/react-v15.5.0.html#discontinuing-support-for-react-addons)
+
+* React Test Utils moved
+    * Currently, the React Test Utils live inside `react-addons-test-utils`. As of 15.5, we’re deprecating that package and moving them to `react-dom/test-utils` instead.
+    This reflects the fact that what we call the Test Utils are really a set of APIs that wrap the DOM renderer.
+    * The exception is shallow rendering, which is not DOM-specific. The shallow renderer has been moved to `react-test-renderer/shallow`.
+
+* **Note:** If your app produces zero warnings in 15.5, it should continue to work in 16 without any changes.
+
+Blog Post: https://reactjs.org/blog/2017/04/07/react-v15.5.0.html
