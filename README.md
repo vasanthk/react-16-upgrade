@@ -23,3 +23,11 @@ Notes on features in React 16 and upgrading from v15
 
 Blog post: https://reactjs.org/blog/2016/04/07/react-v15.html#major-changes
 
+
+## React 15.2.0
+
+* React Error Code System - Makes debugging in production easier
+    * A gulp script that collects all invariant error messages and folds them to a JSON file, and at build-time Babel uses the JSON to rewrite our invariant calls in production to reference the corresponding error IDs. 
+    Now when things go wrong in production, the error that React throws will contain a URL with an error ID and relevant information. The URL will point you to a page in our documentation where the original error message gets reassembled.
+    * Eg. https://reactjs.org/docs/error-decoder.html?invariant=109&args%5B%5D=Foo
+    
