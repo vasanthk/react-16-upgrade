@@ -16,5 +16,10 @@ Notes on features in React 16 and upgrading from v15
 
 * No longer emits extra <span> nodes around the text, making the DOM output much cleaner.
 
+* Functional components can now return null too
+
+* Rendering null now uses comment nodes
+    * Rendering to null was a feature we added in React 0.11 and was implemented by rendering `<noscript>` elements. This has improved React performance for many typical applications.
+
 Blog post: https://reactjs.org/blog/2016/04/07/react-v15.html#major-changes
 
