@@ -65,3 +65,14 @@ Blog Post: https://reactjs.org/blog/2016/11/16/react-v15.4.0.html
 * **Note:** If your app produces zero warnings in 15.5, it should continue to work in 16 without any changes.
 
 Blog Post: https://reactjs.org/blog/2017/04/07/react-v15.5.0.html
+
+## React 15.6.0
+
+* Improving Inputs
+    * the `onChange` event for inputs is a little bit more reliable and handles more edge cases.
+
+* Less Noisy Deprecation Warnings
+    * Downgraded deprecation warnings to use `console.warn` instead of `console.error` since this was causing noise and failing tests.
+
+Blog Post: https://reactjs.org/blog/2017/06/13/react-v15.6.0.html
+
