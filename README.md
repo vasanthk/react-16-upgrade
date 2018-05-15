@@ -2,7 +2,11 @@
 
 Notes on features in React 16 and upgrading from v15
 
-## React 15.0.0
+### React 16
+
+
+
+### React 15.0.0
 
 * Gets rid of the`data-reactid` attribute on every node and makes the DOM lighter.
     * Note: data-reactid is still present for server-rendered content, however it is much smaller than before and is simply an auto-incrementing counter.
@@ -22,7 +26,7 @@ Notes on features in React 16 and upgrading from v15
 Blog post: https://reactjs.org/blog/2016/04/07/react-v15.html#major-changes
 
 
-## React 15.2.0
+### React 15.2.0
 
 * React Error Code System - Makes debugging in production easier
     * A gulp script that collects all invariant error messages and folds them to a JSON file, and at build-time Babel uses the JSON to rewrite our invariant calls in production to reference the corresponding error IDs. 
@@ -31,7 +35,7 @@ Blog post: https://reactjs.org/blog/2016/04/07/react-v15.html#major-changes
     
 Blog Post: https://reactjs.org/blog/2016/07/11/introducing-reacts-error-code-system.html    
     
-## React 15.4.0
+### React 15.4.0
 
 * Separating React and ReactDOM
     * More than a year ago, we started separating React and React DOM into separate packages. 
@@ -49,7 +53,7 @@ Blog Post: https://reactjs.org/blog/2016/07/11/introducing-reacts-error-code-sys
 
 Blog Post: https://reactjs.org/blog/2016/11/16/react-v15.4.0.html
 
-## React 15.5.0
+### React 15.5.0
 
 * React.PropTypes and React.createClass are now in their own packages
     * The propTypes, contextTypes, and childContextTypes APIs will work exactly as before. The only change is that the built-in validators now live in a separate package.
@@ -66,7 +70,7 @@ Blog Post: https://reactjs.org/blog/2016/11/16/react-v15.4.0.html
 
 Blog Post: https://reactjs.org/blog/2017/04/07/react-v15.5.0.html
 
-## React 15.6.0
+### React 15.6.0
 
 * Improving Inputs
     * the `onChange` event for inputs is a little bit more reliable and handles more edge cases.
@@ -76,7 +80,7 @@ Blog Post: https://reactjs.org/blog/2017/04/07/react-v15.5.0.html
 
 Blog Post: https://reactjs.org/blog/2017/06/13/react-v15.6.0.html
 
-## React 15.6.2
+### React 15.6.2
 
 * Fixes regressions for `onChange` event handling updates from last release.
 
