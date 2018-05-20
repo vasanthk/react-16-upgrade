@@ -51,6 +51,12 @@ Notes on features in React 16 and upgrading from v15
     * The size difference is partly attributable to a change in packaging. React now uses Rollup to create flat bundles for each of its different target formats, resulting in both size and runtime performance wins. 
     The flat bundle format also means that React’s impact on bundle size is roughly consistent regardless of how you ship your app, whether it’s with Webpack, Browserify, the pre-built UMD bundles, or any other system.
     
+* Deprecations
+    * Hydrating a server-rendered container now has an explicit API. If you’re reviving server-rendered HTML, use ReactDOM.hydrate instead of ReactDOM.render. 
+    Keep using ReactDOM.render if you’re just doing client-side rendering.
+    * Support for React Addons has been discontinued.
+    * `react-addons-perf` no longer works in React 16. In the meantime, we can use Chrome's performance audity tools to profile React components.          
+    
 Blog post: https://reactjs.org/blog/2017/09/26/react-v16.0.html      
 
 ### React 15.0.0
