@@ -2,6 +2,10 @@
 
 Notes on features in React 16 and upgrading from v15
 
+### React Fiber
+
+
+
 ### React 16
 
 * New render return types: fragments and strings
@@ -50,6 +54,8 @@ Notes on features in React 16 and upgrading from v15
       That amounts to a combined 32% size decrease compared to the previous version (30% post-gzip).
     * The size difference is partly attributable to a change in packaging. React now uses Rollup to create flat bundles for each of its different target formats, resulting in both size and runtime performance wins. 
     The flat bundle format also means that React’s impact on bundle size is roughly consistent regardless of how you ship your app, whether it’s with Webpack, Browserify, the pre-built UMD bundles, or any other system.
+    
+* Breaking changes list [here](https://reactjs.org/blog/2017/09/26/react-v16.0.html#breaking-changes)    
     
 * Deprecations
     * Hydrating a server-rendered container now has an explicit API. If you’re reviving server-rendered HTML, use ReactDOM.hydrate instead of ReactDOM.render. 
