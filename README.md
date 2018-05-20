@@ -4,7 +4,54 @@ Notes on features in React 16 and upgrading from v15
 
 ### React 16
 
+* New render return types: fragments and strings
+    * You can now return an array of elements from a component’s render method. Like with other arrays, you’ll need to add a key to each element to avoid the key warning
+    Starting with React 16.2.0, there is support for a special fragment syntax to JSX that doesn’t require keys.
+    * There is now support for returning strings, too.
+    
+* Better error handling via Error boundaries
+    * Previously, runtime errors during rendering could put React in a broken state, producing cryptic error messages and requiring a page refresh to recover. 
+    To address this problem, React 16 uses a more resilient error-handling strategy. 
+    By default, if an error is thrown inside a component’s render or lifecycle methods, the whole component tree is unmounted from the root. 
+    This prevents the display of corrupted data. However, it’s probably not the ideal user experience.
+    * Instead of unmounting the whole app every time there’s an error, you can use error boundaries. Error boundaries are special components that capture errors inside their subtree and display a fallback UI in its place. 
+    Think of error boundaries like try-catch statements, but for React components.
 
+* Portals
+    * Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+    * ```javascript
+          render() {
+            // React does *not* create a new div. It renders the children into `domNode`.
+            // `domNode` is any valid DOM node, regardless of its location in the DOM.
+            return ReactDOM.createPortal(
+              this.props.children,
+              domNode,
+            );
+          }
+
+        ```      
+* Better server-side rendering
+    * Includes a completely rewritten server renderer. It’s really fast. It supports streaming, so you can start sending bytes to the client faster.
+    * Is better at hydrating server-rendered HTML once it reaches the client. It no longer requires the initial render to exactly match the result from the server. 
+    Instead, it will attempt to reuse as much of the existing DOM as possible. No more checksums! 
+    In general, we don’t recommend that you render different content on the client versus the server, 
+    but it can be useful in some cases (e.g. timestamps). However, it’s dangerous to have missing nodes on the server render as this might cause sibling nodes to be created with incorrect attributes.
+    * According to Sasha’s synthetic benchmarks, server rendering in React 16 is roughly three times faster than React 15.
+    
+* Support for custom DOM attributes
+    * Instead of ignoring unrecognized HTML and SVG attributes, React will now pass them through to the DOM. 
+  This has the added benefit of allowing us to get rid of most of React’s attribute whitelist, resulting in reduced file sizes.
+  
+* Reduced file size
+    * react is 5.3 kb (2.2 kb gzipped), down from 20.7 kb (6.9 kb gzipped).
+    * react-dom is 103.7 kb (32.6 kb gzipped), down from 141 kb (42.9 kb gzipped).
+    * react + react-dom is 109 kb (34.8 kb gzipped), down from 161.7 kb (49.8 kb gzipped).
+      
+      That amounts to a combined 32% size decrease compared to the previous version (30% post-gzip).
+    * The size difference is partly attributable to a change in packaging. React now uses Rollup to create flat bundles for each of its different target formats, resulting in both size and runtime performance wins. 
+    The flat bundle format also means that React’s impact on bundle size is roughly consistent regardless of how you ship your app, whether it’s with Webpack, Browserify, the pre-built UMD bundles, or any other system.
+    
+Blog post: https://reactjs.org/blog/2017/09/26/react-v16.0.html      
 
 ### React 15.0.0
 
