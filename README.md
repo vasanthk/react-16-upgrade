@@ -27,7 +27,11 @@ Notes on features in React 16 and upgrading from v15
           );
         }
     ```
-    
+    * You can use `<Fragment />` the same way you’d use any other element, without changing the way you write JSX. No commas, no keys, no quotes.
+    * Keyed Fragments: Note that the <></> syntax does not accept attributes, including keys.
+      If you need a keyed fragment, you can use <Fragment /> directly. A use case for this is mapping a collection to an array of fragments — for example, to create a description list
+    * Support for JSX fragments is available in `Babel v7.0.0-beta.31` and above. If you are using Babel with Webpack, no additional steps are needed because babel-loader will use your peer-installed version of Babel.
+      
 
 ### React 16
 
