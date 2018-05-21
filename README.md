@@ -6,6 +6,9 @@ Notes on features in React 16 and upgrading from v15
 
 
 
+* Talks
+    * [A Cartoon Intro to Fiber - Lin Clark](https://www.youtube.com/watch?v=ZCuYPiUIONs)
+
 ### React 16
 
 * New render return types: fragments and strings
