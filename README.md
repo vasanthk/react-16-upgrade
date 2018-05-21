@@ -32,6 +32,7 @@ Notes on features in React 16 and upgrading from v15
       If you need a keyed fragment, you can use <Fragment /> directly. A use case for this is mapping a collection to an array of fragments — for example, to create a description list
     * Support for JSX fragments is available in `Babel v7.0.0-beta.31` and above. If you are using Babel with Webpack, no additional steps are needed because babel-loader will use your peer-installed version of Babel.
       
+Blog post: https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html
 
 ### React 16
 
