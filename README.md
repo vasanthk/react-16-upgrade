@@ -61,7 +61,12 @@ Notes on features in React 16 and upgrading from v15
     * Hydrating a server-rendered container now has an explicit API. If you’re reviving server-rendered HTML, use ReactDOM.hydrate instead of ReactDOM.render. 
     Keep using ReactDOM.render if you’re just doing client-side rendering.
     * Support for React Addons has been discontinued.
-    * `react-addons-perf` no longer works in React 16. In the meantime, we can use Chrome's performance audity tools to profile React components.          
+    * `react-addons-perf` no longer works in React 16. In the meantime, we can use Chrome's performance audity tools to profile React components.
+    
+* JavaScript Environment Requirements
+    * React 16 depends on the collection types Map and Set. 
+    If you support older browsers and devices which may not yet provide these natively (e.g. IE < 11), consider including a global polyfill in your bundled application, such as core-js or babel-polyfill. 
+    * React also depends on requestAnimationFrame (even in test environments). You can use the raf package to shim requestAnimationFrame.             
     
 Blog post: https://reactjs.org/blog/2017/09/26/react-v16.0.html      
 
