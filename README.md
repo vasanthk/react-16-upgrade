@@ -8,6 +8,26 @@ Notes on features in React 16 and upgrading from v15
 
 * Talks
     * [A Cartoon Intro to Fiber - Lin Clark](https://www.youtube.com/watch?v=ZCuYPiUIONs)
+    
+
+### React 16.2
+
+* Improved Support for Fragments
+    * Fragments look like empty JSX tags. They let you group a list of children without adding extra nodes to the DOM.
+    ```javascript
+        render() {
+          return (
+            <Fragment>
+              Some text.
+              <h2>A heading</h2>
+              More text.
+              <h2>Another heading</h2>
+              Even more text.
+            </Fragment>
+          );
+        }
+    ```
+    
 
 ### React 16
 
