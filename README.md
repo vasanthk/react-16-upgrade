@@ -6,6 +6,11 @@ Notes on features in React 16 and upgrading from v15
 
 
 
+* Links
+    * [React Fiber Principles](https://github.com/acdlite/react-fiber-architecture)
+    * [Fiber Principles: Contributing To Fiber](https://github.com/facebook/react/issues/7942)
+    * [React 16 Umbrella ☂️ (and 15.5)](https://github.com/facebook/react/issues/8854)
+
 * Talks
     * [A Cartoon Intro to Fiber - Lin Clark](https://www.youtube.com/watch?v=ZCuYPiUIONs)
     
